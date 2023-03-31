@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="entrada">
+            <span>Cadastro de Pessoas</span>
+            <button onclick="abrirModal()" class="btn adicionar">Adicionar</button>
+        </div>
+        <div class="tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>CPF</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="coteudo" id="conteudo">
+                </tbody>
+            </table>
+        </div>
+        <div id="box-modal" class="box-modal">
+            <div class="modal" id="modal">
+                <form>
+                    <label for="nome">Digite o seu nome</label>
+                    <br><br>
+                    <input type="text" name="nome" id="nome" required>
+                    <br><br>
+                    <label for="idade">Digite a sua idade</label>
+                    <br><br>
+                    <input type="number" name="idade" id="idade" required>
+                    <br><br>
+                    <label for="cpf">Digite o seu CPF</label>
+                    <br><br>
+                    <input type="text" name="cpf" id="cpf" required>
+                </form>
+                <br>
+                <div class="btn acoes-modal">
+                    <button class="btn salvarEdicao" id="salvarEdicao" onclick="salvarEdit()">Salvar</button>
+                    <button class="btn salvar" id="salvar" onclick="salvarPessoas()">Salvar</button>
+                    <button class="btn cancelar" onclick="fecharModal()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
